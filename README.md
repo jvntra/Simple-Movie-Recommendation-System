@@ -12,24 +12,30 @@ Recommender systems aka recommndation engines are information filtering tools th
 In this exercise, we've used the MovieLens data set curated by ,, which consists of approximately 100,000 ratings of a corpus of 9,000 movies over a 600-person user base. The dataset is distributed over four csv files which contain information on ratings, movies, links and tags. For our purposes we've only considered the **ratings** and the **movies** datasets with some additional information obtained by tmdb api calls to select movie titles from tmdb-specific coded movie ids native to the curated dataset.
 
 **Ratings**
+
 the ratings dataset is comprised of 100,836 observations which are records of the user id(userId), the id of the movie that was rated by said user (movieId) and the time at which the rating was recorded (timestamp).
 
 **Movies**
+
 the movies data table consists of tthe ID of the movies (movieId), the corresponding title (title) and genre of each movie (genres)
 
-### Data Collection and Cleaning
+### Data Preprocessing & Structuring
 
-
+xxxxx
 
 ## The Models
+
+xxxxx
 
 ## Feature Engineering
 
 **Average Rating**
+
 Since the dataset is a collection of ratings by a number of different users for various movies, we compute the average rating for each movie in the dataset.
 
 **Total Number of Ratings**
-To some degree, the rating of a movie can be interpreted to be proportional to the total number of ratings it has. Therefor, we will also consider the total number of ratings submitted for each movie.
+
+To some degree, the rating of a movie can be interpreted to be proportional to the total number of ratings it has. Therefor, we also consider the total number of ratings submitted for each movie.
 
 ## Insights and Suggestions
 
