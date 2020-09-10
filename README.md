@@ -6,7 +6,13 @@ Data Science cohort 062220
 
 ## Introduction
 
-Recommender systems aka recommendation engines are information filtering tools that predict ratings for user-product interactions in big data environments (think netflix, spotify, google etc). The broad purpose of this computational technique is to provide users with recommendations to other products and assist the company returns through driven conversion. In addition to the latter, movie recommendation systems provide a mechanism to assist data professionals and stakeholders in classifying users with similar interests. This makes them an essential part of websites and ecommerce applications and the evaluation and marketing of a user base. 
+The global video streaming market size was valued at USD 42.6 billion in 2019 and is projected to grow at a compound annual growth rate (CAGR) of 20.4% from 2020 to 2027 (https://www.grandviewresearch.com/industry-analysis/video-streaming-market).
+Innovations in artificial intelligence and Machine Learning are expected to improve video quality and personalized recommendations and aid in market growth.
+
+Recommender systems aka recommendation engines are information filtering tools that predict ratings for user-product interactions in big data environments (think netflix, spotify, google etc). The broad purpose of this computational technique is to provide users with personalized recommendations to other products and assist with product engagement while driving conversions. In addition to the latter, movie recommendation systems provide a mechanism to assist data professionals and stakeholders in classifying users with similar interests. This makes them an essential part of websites and e-commerce applications and the marketing of user base demographics. 
+
+
+
 
 ## The Data & Context.
 
@@ -14,13 +20,15 @@ In this exercise, we've used the MovieLens small-dataset curated by the Grouplen
 
 **Ratings**
 
-the ratings dataset is comprised of 100,836 observations which are records of the user id(userId), the id of the movie that was rated by said user (movieId) and the time at which the rating was recorded (timestamp).
+The ratings dataset is comprised of 100,836 observations which are records of the user id(userId), the id of the movie that was rated by said user (movieId) and the time at which the rating was recorded (timestamp).
 
 **Movies**
 
-the movies data table consists of tthe ID of the movies (movieId), the corresponding title (title) and genre of each movie (genres)
+The movies data table consists of tthe ID of the movies (movieId), the corresponding title (title) and genre of each movie (genres)
 
 ### Data Preprocessing & Structuring
+
+The movielens dataset was curated and compiled before downloading. We removed extraneous columns in the primary data set (timestamp in the ratings table) as well as a host of extraneous variables retrieved from IMDB api calls.
 
 
 
@@ -29,11 +37,13 @@ the movies data table consists of tthe ID of the movies (movieId), the correspon
 We chose to use two models to address two approaches in collaborative filtering recommendation engines. These models are KNN which is a Neigborhood-Based method of filtering (making automatic predictions) and SVD which is a model based method. 
 
 **KNN:** 
-    KNN is a machine learning algorithm to find clusters of similar users (neighbors) based on common movie ratings, and make predictions using the average rating of top-k nearest neighbors. It uses the weighted-average of the k-most similar neighbors to issue a predicted rating.
 
-**SVD:** 
-    SVD is another machine learning algorithm that tries to explain complex relationships between variables in a dataset by decomposing the dataset or matrix and centering on latent relationships much like PCA.
-    It is found to be the most accurate approach to reduce problems with sparsity in the data as all users do not rate all movies leading to sparsity in the data. Another useful feature is that SVDs create embeddings (analogous to principle component loadings) which are low-dimensional hidden factors which for a certain user and item coupling can represent exogenous features of the data like how political a movie is, how much special effects it contained and perhaps how dialogue driven the movie is.
+KNN is a machine learning algorithm to find clusters of similar users (neighbors) based on common movie ratings, and make predictions using the average rating of top-k nearest neighbors. It uses the weighted-average of the k-most similar neighbors to issue a predicted rating.
+
+**SVD:**
+
+ SVD is another machine learning algorithm that tries to explain complex relationships between variables in a dataset by decomposing the dataset or matrix and centering on latent relationships much like PCA.
+ It is found to be the most accurate approach to reduce problems with sparsity in the data as all users do not rate all movies leading to sparsity in the data. Another useful feature is that SVDs create embeddings (analogous to principle component loadings) which are low-dimensional hidden factors, which for a certain user and item coupling, can represent exogenous features of the data like how political a movie is, how much special effects it contained and perhaps how dialogue driven the movie is.
     
     
 **Evaluation Metrics:**
@@ -51,15 +61,10 @@ We focus on RMSE over MAE as our evaluation metric because RMSE penalizes larger
 | Pre-computation not possible        |pre-computation possible|
 |Relies on user-itemsimilarity metrics|Relies on matrix factorization|
 
-## Feature Engineering
 
-**Average Rating**
 
-Since the dataset is a collection of ratings by a number of different users for various movies, we compute the average rating for each movie in the dataset.
 
-**Total Number of Ratings**
+## Insights & Conclusions
 
-To some degree, the rating of a movie can be interpreted to be proportional to the total number of ratings it has. Therefor, we also consider the total number of ratings submitted for each movie.
-
-## Insights and Suggestions
+xxxx Adding movie descriptions to recommendations to aid in click and rating conversions.
 
