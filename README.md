@@ -24,9 +24,15 @@ The ratings dataset is comprised of 100,836 observations which are records of th
 
 ![](movielens_data/ratings_freq.png)
 
+We can see that from the distribution of ratings in this data, the most common rating is a 4.0. This might indicate that most movies in this set are truthfully highly rated or possibly suggest user neutrality around this rating. The interpretation here may also have some effect as far as the a personalized recommendation.
+
 ![](movielens_data/genre_rating_freq.png) 
 
+We can see in the visualization above that the genres with most count of ratings are Drama, Comedy, Thriller and Action. This availability if it is generalized to the whole user dataset (this is only a subset of the data) my just pose a rating selection effect since most movies are rated in these categories
 
+**Hypothesis tests** were done for analyses of ratings vs budget and ratings vs runtime and for both tests and we concluded to
+
+Reject the null hypothesis that there is no statistical difference between the budget of a movie and its rating; the runtime of a movie and its rating.
 
 **Movies**
 
