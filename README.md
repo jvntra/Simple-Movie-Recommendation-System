@@ -13,7 +13,6 @@ Recommendation systems AKA recommendation engines are information filtering tool
 
 
 
-
 ## The Data & Context.
 
 In this exercise, we've used the MovieLens small-dataset curated by the Grouplens research lab at the University of Minnesota. The content consists of approximately 100,000 ratings of a corpus of 9,000 movies with 3600 tags submitted by a 600-person user base. The dataset is distributed over four csv files which contain information on ratings, movies, links and tags. For our purposes we've only considered the **ratings** and the **movies** datasets with some additional information obtained by tmdb api calls to select movie titles from tmdb-specific coded movie ids native to the curated dataset.
@@ -28,11 +27,11 @@ We can see that from the distribution of ratings in this data, the most common r
 
 ![](movielens_data/genre_rating_freq.png) 
 
-We can see in the visualization above that the genres with most count of ratings are Drama, Comedy, Thriller and Action. This availability if it is generalized to the whole user dataset (this is only a subset of the data) my just pose a rating selection effect since most movies are rated in these categories
+We can see in the visualization above that the genres with most count of ratings are Drama, Comedy, Thriller and Action. This availability if it is generalized to the whole user dataset (this is only a subset of the data) my just pose a rating selection effect since most movies are rated in these categories.
 
 **Hypothesis tests** were done for analyses of ratings vs budget and ratings vs runtime and for both tests and we concluded to
 
-Reject the null hypothesis that there is no statistical difference between the budget of a movie and its rating; the runtime of a movie and its rating.
+Rejected the null hypothesis that there is no statistically significant difference between the budget of a movie and its rating; the runtime of a movie and its rating.
 
 **Movies**
 
@@ -75,8 +74,13 @@ We focus on RMSE over MAE as our evaluation metric because RMSE penalizes larger
 
 
 
-
 ## Insights & Conclusions
 
-xxxx Adding movie descriptions to recommendations to aid in click and rating conversions.
+Based on the low RMSE score and the high success rate from the empirical evaluation, we can say with high confidence that our preliminary model works well. Given an RMSE score of .86 we know that we can say that individual users with benefit from this personalized recommendation system. All the user needs to do is fill in ratings for a few movies from this data set and it will accurately return 5 movie recommendations.
+
+We can market this technology to online streaming services who would benefit greatly from this low RMSE and high empirical evaluation.
+
+In the future we will build onto this project and add better recommendations. One way we plan on doing this is only recommending movies based on certain genres if thats what the user wants to see. Another feature that we would like to add is a non-personalized recommendation system. We will list the top movies from years that the user chooses and only show the movies which they have not yet seen.
+
+
 
