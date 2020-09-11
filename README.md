@@ -67,7 +67,7 @@ We focus on RMSE over MAE as our evaluation metric because RMSE penalizes larger
 
 | KNN                                 | SVD                                                  |
 |-------------------------------------|------------------------------------------------------|
-| Complete input data is required     |Creates an abstraction that represents data (like PCs)|
+| Complete input data is required     |Creates an abstract representation of the data (like PCs)|
 | Does not scale well                 |Scales well|
 | Pre-computation not possible        |pre-computation possible|
 |Relies on user-itemsimilarity metrics|Relies on matrix factorization|
@@ -81,6 +81,3 @@ Based on the low RMSE score and the high success rate from the empirical evaluat
 We can market this technology to online streaming services who would benefit greatly from this low RMSE and high empirical evaluation.
 
 In the future we will build onto this project and add better recommendations. One way we plan on doing this is only recommending movies based on certain genres if thats what the user wants to see. Another feature that we would like to add is a non-personalized recommendation system. We will list the top movies from years that the user chooses and only show the movies which they have not yet seen.
-
-
-
